@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="css/emoji.css" rel="stylesheet">
+    <link href="css/emoji.css.map" rel="stylesheet">
+    <link href="css/emoji.scss" rel="stylesheet">
+
+    <script src="js/config.js" defer></script>
+    <script src="js/config.min.js" defer></script>
+    <script src="js/emoji-picker.js" defer></script>
+    <script src="js/emoji-picker.min.js" defer></script>
+    <script src="js/jquery.emojiarea.js" defer></script>
+    <script src="js/jquery.emojiarea.min.js" defer></script>
+    <script src="js/util.js" defer></script>
+    <script src="js/util.min.js" defer></script>
+
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
 
   </head>
   
   <body>
-    <link href="https://cdn.jsdelivr.net/npm/emoji-picker-element@1.4.3/dist/emoji-picker-element.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/emoji-picker-element@2.0.2/dist/emoji-picker-element.js" defer></script>
+
+
     <header>
       <div id="menu">
         <div id="main_Header"><h1><i>Your Personalized Web3 Experience</i></h1></div>
@@ -74,9 +90,9 @@
         <b><i>My Photos</i></b>
         <br/>
         <br/>
-        <img src=photo1.jpg width=300 height=300>
-        <img src=photo2.jpg width=300 height=300>
-        <img src=photo3.jpg width=300 height=300>
+        <img src="photo1.jpg" alt="Photo 1">
+        <img src="photo2.jpg" alt="Photo 2">
+        <img src="photo3.jpg" alt="Photo 3">
         <br/>
         <br/>
         <br/>
@@ -285,19 +301,20 @@
         <br/>
     </section>
 
-
     <script type="text/javascript">
         $(function(){
-          $("#nav a").click(function(e){
-            e.preventDefault();
-            $('html,body').scrollTo(this.hash,this.hash); 
-          });
+            $("#nav a").click(function(e){
+                e.preventDefault();
+                $('html,body').scrollTo(this.hash,this.hash); 
+            });
         });
-        </script>
-        <script type="text/javascript">
-        $(document).scroll(function() {
-            $('#menu').toggle($(this).scrollTop()>1000)
-        });​
     </script>
+
+    <script type="text/javascript">
+        $(document).scroll(function() {
+            $('#menu').toggle($(this).scrollTop() > 1000);
+        });
+    </script>
+
   </body>
 </html>
